@@ -1,75 +1,74 @@
-# React + TypeScript + Vite
+# KedaiKlik Customer Menu Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A customer-facing restaurant ordering website that simplifies the dining
+experience through QR code-based ordering.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+KedaiKlik Customer Menu Web allows customers to scan a QR code at their
+table, browse the restaurant's food and beverage menu, view product
+details, add items to their orders, and place orders directly from their
+tables.
 
-## React Compiler
+The application connects to backend REST APIs to process ordering
+activities and supports real-time order updates. It also integrates
+digital payment functionality through Midtrans.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
 
-## Expanding the ESLint configuration
+-   **QR Code-Based Access:** Customers can access the digital menu by
+    scanning a table QR code.
+-   **Menu Browsing:** Explore available food and beverage items.
+-   **Product Details:** View detailed information about menu items.
+-   **Cart Management:** Add selected items to an order before
+    submitting it.
+-   **Table Ordering:** Place orders directly from the customer's table.
+-   **Real-Time Order Updates:** Receive order updates through real-time
+    communication.
+-   **Digital Payments:** Support digital payment integration through
+    Midtrans.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  Category                  Technologies
+  ------------------------- ----------------------
+  Frontend                  React.js, TypeScript
+  Backend                   Express.js
+  Database                  PostgreSQL
+  ORM                       Prisma ORM
+  Real-Time Communication   Socket.IO
+  Payment Integration       Midtrans
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Ordering Workflow
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1.  Customers scan the QR code available at their table.
+2.  The website displays the restaurant's digital menu.
+3.  Customers browse menu items and view product details.
+4.  Customers add their selections to the order and submit it.
+5.  The application sends order data to the backend through REST APIs.
+6.  Customers can follow relevant order updates and use the available
+    digital payment functionality.
 
-```
+## Repository
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+-   **GitHub:** [KedaiKlik Customer Menu
+    Web](https://github.com/SyavanaDwi/KedaiKlik-Customers)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Related Projects
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+-   [KedaiKlik Management System
+    Web](https://github.com/SyavanaDwi/KedaiKlik)
+-   [KedaiKlik Management System
+    Mobile](https://github.com/SyavanaDwi/KedaiKlik-Mobile)
 
-```
+## Developer
+
+**Syavana Dwi Suardi**\
+Full Stack Developer
+
+-   GitHub: [@SyavanaDwi](https://github.com/SyavanaDwi)
+-   Email: <syavanadwi8@gmail.com>
+
+------------------------------------------------------------------------
+
+*This project is part of the KedaiKlik restaurant management system.*
